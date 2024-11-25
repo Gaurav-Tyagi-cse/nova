@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Logos Grid</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .university-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transition: transform 0.3s;
+        }
+        .university-card:hover {
+            transform: translateY(-5px);
+        }
+        .university-logo {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .enquire-btn {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #FF9800;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px 0 0 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-color: #0A3B70; color: white;">
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="university-card">
+                    <img src="path-to-amity-logo.png" alt="Amity University" class="university-logo">
+                    <h6>AMITY UNIVERSITY</h6>
+                </div>
+            </div>
+            <!-- Repeat the above block for each university logo -->
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="university-card">
+                    <img src="path-to-chandigarh-logo.png" alt="Chandigarh University" class="university-logo">
+                    <h6>CHANDIGARH UNI.</h6>
+                </div>
+            </div>
+            <!-- Add more cards for other universities -->
+        </div>
+    </div>
+
+    <div class="enquire-btn">Enquire Now</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Degree Program</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.0/scrollreveal.min.js"></script>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+}
+
+section {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#hero {
+  background: #4CAF50;
+  color: white;
+  padding: 5rem 1rem;
+}
+
+#hero h2 {
+  font-size: 3rem;
+}
+
+.cta-btn {
+  background: #FF6347;
+  padding: 0.8rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+.section {
+  background: #fff;
+  margin: 2rem 0;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px;
+}
+
+.programs-grid, .career-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.program, .career-item {
+  background: #e9ecef;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  background: #4CAF50;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+  .programs-grid, .career-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">
+      <h1>Online Degree Program</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#career">Careers</a></li>
+        <li><a href="#apply">Apply</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h2>Earn Your Degree Online</h2>
+      <p>Flexible, Affordable, and Accessible Education</p>
+      <a href="#apply" class="cta-btn">Start Your Application</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>Why Choose Us?</h2>
+    <div class="grid">
+      <div class="feature">
+        <h3>Flexibility</h3>
+        <p>Study anytime, anywhere at your own pace.</p>
+      </div>
+      <div class="feature">
+        <h3>Affordable</h3>
+        <p>Lower tuition fees and no commuting costs.</p>
+      </div>
+      <div class="feature">
+        <h3>Global Reach</h3>
+        <p>Access top programs from institutions worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="section">
+    <h2>Programs Offered</h2>
+    <div class="programs-grid">
+      <div class="program">
+        <h3>Business Management</h3>
+        <p>Develop leadership skills and knowledge in business operations.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="program">
+        <h3>Computer Science</h3>
+        <p>Master coding, algorithms, and software development.</p>
+        <a href="#">Learn More</a>
+      </div>
+      <div class="program">
+        <h3>Healthcare Management</h3>
+        <p>Prepare for roles in healthcare administration and management.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Career Opportunities Section -->
+  <section id="career" class="section">
+    <h2>Career Opportunities</h2>
+    <div class="career-grid">
+      <div class="career-item">
+        <h3>Tech Industry</h3>
+        <p>Work for top companies like Google and Microsoft.</p>
+      </div>
+      <div class="career-item">
+        <h3>Business & Marketing</h3>
+        <p>Become a business analyst, marketer, or entrepreneur.</p>
+      </div>
+      <div class="career-item">
+        <h3>Healthcare</h3>
+        <p>Join healthcare management teams or work in hospitals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Process Section -->
+  <section id="apply" class="section">
+    <h2>Application Process</h2>
+    <p>Follow these simple steps to apply for our online programs:</p>
+    <ol>
+      <li>Fill out the online application form.</li>
+      <li>Submit your academic documents.</li>
+      <li>Schedule an interview (if necessary).</li>
+      <li>Get started with your online degree!</li>
+    </ol>
+    <a href="#" class="cta-btn">Apply Now</a>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Reach out to us:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Online Degree Program. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

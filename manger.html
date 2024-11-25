@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EDUFY NOVA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="imges/logo.jpg" style="border-radius: 50%;">
+    <script>
+        $(function () {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+     <style>
+        .cartficate {
+            width: 100%;
+            height: 400px;
+            /* Set the height as per your requirement */
+            position: relative;
+        }
+
+        .image-container {
+            background-image: url('./imges/khonw.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+        
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .specialization-card {
+      /* background: linear-gradient(145deg, #0d2e55, #0a2546); */
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .specialization-card h5 {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .specialization-card p {
+      margin-bottom: 0;
+    }
+
+    .specialization-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    }
+    .left-section {
+      background-color: #fdf4e3;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .left-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right-section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+/* Section Styling */
+
+/* Section Styling */
+.lms-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(to bottom, #F8F9FA, rgb(254, 254, 162), #F8F9FA);
+    color: #fff;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Individual Card */
+.card {
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: calc(33.333% - 1rem); /* Makes three cards fit in one row */
+    max-width: 300px; /* Optional: Limit card width */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Animation */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(106, 17, 203, 0.2);
+    border-radius: 8px;
+    opacity: 0;
+    animation: fade-in 0.3s forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Icons */
+.icon {
+    font-size: 2rem;
+    color: #6a11cb;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 1rem); /* Two cards per row on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%; /* One card per row on small screens */
+    }
+}
+
+ /* Container Styling */
+ .one {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    } 
+
+    /* Tab Navigation Styling */
+    .nav-tabs .nav-link {
+      color: #495057;
+      font-weight: bold;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+    }
+
+    .nav-tabs .nav-link:hover {
+      background-color: #0056b3;
+      color: #ffffff;
+    }
+
+    /* Tab Content Styling */
+    .tab-content h3 {
+      color: #007bff;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .tab-content ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .tab-content ul li {
+      background: #f1f1f1;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      border-left: 4px solid #007bff;
+      transition: transform 0.3s;
+    }
+
+    .tab-content ul li:hover {
+      background: #e9ecef;
+      transform: translateY(-3px);
+    }
+
+    .tab-content ul li strong {
+      color: #343a40;
+    }
+
+    .tab-content ul li p {
+      margin: 5px 0 0;
+      color: #6c757d;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+
+    <header class="cartficate">
+        <div class="image-container">
+            <h1 class="text-center text-white" style="padding-top: 10rem; font-size: 55px;">knowledge Bank</h1>
+       </div>
+    </header>
+
+
+    <!-- <section >
+        <div class="container py-5">
+          <h2 class="section-title " >Specialization Rationale
+        </h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Marketing Management (Including Digital Marketing)</h5>
+                <p>This specialization is ideal for those interested in consumer psychology, brand positioning, and communication strategies. Digital marketing plays a key role, leveraging data-driven insights and online platforms to shape and respond to consumer behavior. This is a good choice for roles in brand management, market research, and digital strategy.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Business Management or Entrepreneurship</h5>
+                <p>Perfect for those who want a broad understanding of business, covering finance, marketing, operations, and leadership. Entrepreneurship adds focus on innovation, risk-taking, and start-up management. This specialization is suited for aspiring managers, consultants, and entrepreneurs looking to lead organizations or launch new ventures.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Finance</h5>
+                <p>This field suits those drawn to financial analysis, risk assessment, and wealth management. Finance professionals manage investments, create budgets, and guide companies in maximizing profitability. This specialization leads to roles in investment banking, corporate finance, and financial consulting.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>FinTech</h5>
+                <p>FinTech merges finance and technology, suitable for those interested in creating innovative financial services using digital tools. It’s ideal for candidates interested in cryptocurrencies, mobile payments, blockchain, and AI-driven financial solutions. Roles include product management, financial analytics, and innovation consultancy in banking or tech firms.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Human Resources (HR) and Analytics</h5>
+                <p>This specialization is for individuals who enjoy talent management, organizational psychology, and people analytics. Modern HR focuses on data-driven decisions for recruitment, training, and retention. Graduates pursue careers as HR managers, talent acquisition specialists, and organizational development consultants.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Operations Management</h5>
+                <p>Operations management is suited for those interested in enhancing efficiency, productivity, and supply chain management. It covers everything from process optimization to logistics. Careers are found in industries like manufacturing, logistics, and consulting, often as operations managers or supply chain analysts.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>Data Science</h5>
+                <p>Ideal for those with a passion for statistics, coding, and data analytics, Data Science enables informed decision-making through data insights. Data scientists work in various industries, analyzing big data for roles in predictive analytics, machine learning, and business intelligence.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="specialization-card">
+                <h5>International Finance</h5>
+                <p>This specialization is for candidates interested in global markets, foreign exchange, and cross-border transactions. It involves understanding international regulations and managing foreign investments, with careers in multinational corporations, global banks, or consulting firms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  </section> -->
+  <div class="container one mt-5">
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs" id="specializationsTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="management-tab" data-bs-toggle="tab" data-bs-target="#management" type="button" role="tab" aria-controls="management" aria-selected="true">
+          Management
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tech-tab" data-bs-toggle="tab" data-bs-target="#tech" type="button" role="tab" aria-controls="tech" aria-selected="false">
+          Tech
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tabs Content -->
+    <div class="tab-content mt-3" id="specializationsTabsContent">
+      <!-- Management Tab -->
+      <div class="tab-pane fade show active" id="management" role="tabpanel" aria-labelledby="management-tab">
+        <h3>Management Specializations</h3>
+        <ul>
+          <li>
+            <strong>Marketing Management (Including Digital Marketing):</strong>
+            <p>Ideal for those interested in consumer psychology, brand positioning, and communication strategies. Digital marketing leverages data insights and online platforms to shape and respond to consumer behavior. Suitable for roles in brand management, market research, and digital strategy.</p>
+          </li>
+          <li>
+            <strong>Business Management or Entrepreneurship:</strong>
+            <p>Covers finance, marketing, operations, and leadership with a focus on innovation and start-up management. Ideal for aspiring managers, consultants, and entrepreneurs.</p>
+          </li>
+          <li>
+            <strong>Finance:</strong>
+            <p>For individuals drawn to financial analysis, risk assessment, and wealth management. Leads to roles in investment banking, corporate finance, and financial consulting.</p>
+          </li>
+          <li>
+            <strong>FinTech:</strong>
+            <p>Merges finance and technology, focusing on digital tools like cryptocurrencies, mobile payments, and AI solutions. Career paths include financial analytics and innovation consultancy.</p>
+          </li>
+          <li>
+            <strong>Human Resources (HR) and Analytics:</strong>
+            <p>Focuses on talent management, organizational psychology, and data-driven HR decisions. Graduates often work as HR managers, talent specialists, or organizational consultants.</p>
+          </li>
+          <li>
+            <strong>Operations Management:</strong>
+            <p>Focuses on efficiency, productivity, and supply chain management. Careers include operations managers or supply chain analysts in manufacturing, logistics, and consulting.</p>
+          </li>
+          <li>
+            <strong>International Finance:</strong>
+            <p>Explores global markets, foreign exchange, and cross-border transactions. Careers are in multinational corporations, global banks, or consulting firms.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Tech Tab -->
+      <div class="tab-pane fade" id="tech" role="tabpanel" aria-labelledby="tech-tab">
+        <h3>Tech Specializations</h3>
+        <ul>
+          <li>
+            <strong>Software Development:</strong>
+            <p>Covers programming, version control, and application design. Careers include software engineers, developers, and application architects.</p>
+          </li>
+          <li>
+            <strong>Data Science:</strong>
+            <p>Focuses on statistics, coding, and analytics for informed decision-making. Leads to roles in machine learning, predictive analytics, and business intelligence.</p>
+          </li>
+          <li>
+            <strong>Cybersecurity:</strong>
+            <p>Involves network security, ethical hacking, and encryption methods. Careers include cybersecurity analysts, ethical hackers, and security consultants.</p>
+          </li>
+          <li>
+            <strong>Cloud Computing:</strong>
+            <p>Focuses on virtualization, cloud architecture, and service integration. Leads to roles like cloud architects and DevOps engineers.</p>
+          </li>
+          <li>
+            <strong>FinTech:</strong>
+            <p>Merges finance and technology, exploring areas like blockchain, mobile payments, and AI-driven solutions. Roles include product management and innovation consultancy.</p>
+          </li>
+          <li>
+            <strong>DevOps:</strong>
+            <p>Focuses on continuous integration/delivery, automation, and containerization. Careers include DevOps engineers and infrastructure specialists.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+  <!-- <section class="lms-section">
+    <h1 class="section-title">Learning Management Systems (LMS) in Higher Education</h1>
+    <div class="cards-container">
+        <div class="card">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <h2>Flexible Learning Schedules</h2>
+            <p>LMS platforms allow learners to access course materials anytime, making it easy for working professionals to learn at their own pace.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-laptop-code"></i></div>
+            <h2>Skill Development</h2>
+            <p>Online education supports continuous learning, helping professionals keep up with fast-changing industries like tech, business, and healthcare.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-comments"></i></div>
+            <h2>Interactive Resources</h2>
+            <p>Interactive resources like video lectures, quizzes, and forums make learning engaging, accessible anytime from any device.</p>
+        </div>
+    </div>
+</section> -->
+
+<section class="lms-section">
+    <h1 class="section-title">Learning Management Systems (LMS) in Higher Education</h1>
+    <div class="cards-container">
+        <div class="card">
+            <div class="icon"><i class="fas fa-clock"></i></div>
+            <h2>Flexible Learning Schedules</h2>
+            <p>LMS platforms allow learners to access course materials anytime, making it easy for working professionals to learn at their own pace.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-laptop-code"></i></div>
+            <h2>Skill Development</h2>
+            <p>Online education supports continuous learning, helping professionals keep up with fast-changing industries like tech, business, and healthcare.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-comments"></i></div>
+            <h2>Interactive Resources</h2>
+            <p>Interactive resources like video lectures, quizzes, and forums make learning engaging, accessible anytime from any device.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-briefcase"></i></div>
+            <h2>Career Advancement</h2>
+            <p>Gain new qualifications with online certifications or degrees to enhance your career path or shift to specialized roles.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-globe"></i></div>
+            <h2>Global Networking</h2>
+            <p>Connect with peers and instructors worldwide, gaining diverse perspectives and valuable professional connections.</p>
+        </div>
+        <div class="card">
+            <div class="icon"><i class="fas fa-wallet"></i></div>
+            <h2>Cost-Effective Learning</h2>
+            <p>Online courses are more affordable, making skill development accessible without heavy financial commitments.</p>
+        </div>
+    </div>
+    
+</section>
+<br>
+<br>
+
+
+    
+    <div id="footer"></div>
+    <!-- Scripts for Bootstrap Functionality -->
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

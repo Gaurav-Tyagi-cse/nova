@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> EDUFY NOVA</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <link rel="shortcut icon" type="image/x-icon" href="imges/logo.jpg" style="border-radius: 50%;">
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+    });
+  </script>
+  <style>
+    body {
+      background: #f0e0d4;
+    }
+
+    h1 {
+      padding: 0 0 30px;
+    }
+
+    .our-team {
+      text-align: center;
+      position: relative;
+    }
+
+    .our-team .pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 8px solid #7a4b94;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .our-team img {
+      width: 100%;
+      height: auto;
+    }
+
+    .our-team .social {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: absolute;
+      top: 50px;
+      left: 20px;
+      transition: all 0.3s ease-out 0s;
+    }
+
+    .our-team .social li a {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      background: #f28a31;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 5px;
+      transform: scale(0);
+      transition: all 0.2s ease 0s;
+    }
+
+    .our-team:hover .social li a {
+      transform: scale(1);
+    }
+
+    .our-team:hover .social li a:hover {
+      background: #7a4b94;
+      text-decoration: none;
+    }
+
+    .our-team .team-content {
+      padding: 15px 15px 20px;
+      background: #7a4b94;
+      border-radius: 40px 10px;
+      margin-top: -20px;
+      color: #fff;
+    }
+
+    .our-team .title {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+    }
+
+    .our-team .post {
+      display: block;
+      font-size: 14px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .our-team .description {
+      padding: 20px;
+      background: #fff;
+      border-radius: 20px;
+      font-size: 16px;
+      color: #666;
+      line-height: 30px;
+      margin-bottom: 0;
+    }
+
+    @media only screen and (max-width: 990px) {
+      .our-team {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media only screen and (max-width: 359px) {
+      .our-team .pic {
+        width: 150px;
+        height: 150px;
+      }
+
+      .our-team .social {
+        top: 20px;
+      }
+    }
+
+
+    .job-card {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+
+    .job-card h5 {
+      font-weight: bold;
+    }
+
+    .apply-btn {
+      background-color: #00274d;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .apply-btn:hover {
+      background-color: #004080;
+    }
+
+    .tab-pane {
+      padding-top: 20px;
+    }
+
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .left-section {
+      background-color: #fdf4e3;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .left-section img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .right-section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control,
+    .btn {
+      border-radius: 20px;
+    }
+
+    .btn {
+      background-color: #ffa726;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: #ff9800;
+    }
+
+
+
+    .carddds-container {
+            display: grid;
+            
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .carddd {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* background: rgb(163, 163, 255); */
+            background-color: white;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-left: 10px;
+            margin-right: 39px;
+            
+        }
+        .carddd:hover{
+          background-color: #ffa726;
+          color: white;
+        }
+        .carddd :hover i{
+          color: white;
+        }.apply-now {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apply-now h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.apply-now p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.apply-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    padding-top: 60px;
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* The close button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #218838;
+}
+
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <header class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Career</h1>
+        <p> Build Your Career With Learning EDUFY NOVA</p>
+        <!-- <a href="#learn-more" class="hero-btn">Learn More</a> -->
+      </div>
+      <div class="hero-image" style="margin-top: 9rem; ">
+        <img src="imges/onl.png" alt="University Campus" style="margin-bottom: 14rem;">
+      </div>
+    </div>
+  </header>
+
+  <div class="container mt-5">
+    <h2 class="text-center">JOIN <span class="text-primary"></span></h2>
+    <p class="text-center">Current Openings</p>
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button"
+          role="tab"> Cybersecurity
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="hr-tab" data-bs-toggle="tab" data-bs-target="#hr" type="button"
+          role="tab">Artificial Intelligence (AI)</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="digital-marketing-tab" data-bs-toggle="tab" data-bs-target="#digital-marketing"
+          type="button" role="tab">Digital Marketing</button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="sales" role="tabpanel">
+        <div class="job-card">
+          <h5>Business Development Executive (Fresher and Experience)</h5>
+          <p>Business development executives are responsible for driving company sales by sourcing new clients, and by
+            convincing existing clients to purchase added offerings.</p>
+          <!-- <button class="apply-btn">Apply Now</button> -->
+        </div>
+      </div>
+      <div class="tab-pane fade" id="hr" role="tabpanel">
+        <div class="job-card">
+          <h5>Artificial Intelligence (AI)</h5>
+          <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are designed
+            to think, reason, and learn like humans.</p>
+          <!-- <button class="apply-btn">Apply Now</button> -->
+        </div>
+      </div>
+      <div class="tab-pane fade" id="digital-marketing" role="tabpanel">
+        <div class="job-card">
+          <h5>Cybersecurity</h5>
+          <p>Cybersecurity is the practice of protecting systems, networks, devices, and data from cyberattacks,
+            unauthorized access, and damage. It ensures the confidentiality, integrity, and availability of digital
+            information, safeguarding individuals and organizations from cyber threats..</p>
+          
+         
+          
+          <!-- Hidden Application Form -->
+         
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+
+
+
+
+
+
+  <section>
+    <div class="container py-5">
+      <div class="row text-center">
+        <h1>Our Team</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="imges/ceo.jpg" alt="">
+            </div>
+            <ul class="social">
+              <li><a href="https://www.linkedin.com/company/edufy-learning-live/" class="fab fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/edufy_nova/profilecard/?igsh=MWQzbHJ1NHZreGpyaw==" class="fab fa-instagram" target="_blank"></a></li>
+              <li><a href="#" class="fab fa-google-plus"></a></li>
+
+            </ul>
+            <div class="team-content">
+              <h3 class="title">Avinish</h3>
+              <span class="post">Founder and   CEO</span>
+            </div>
+            <p class="description" style="text-align: justify;">
+              I’m Avinish, with extensive experience in the edtech space, having worked with companies like Hike,
+              ExtraMarks, and Manipal. I have led operations focused on academic excellence and career development,
+              ensuring professionals and students thrive in both areas. I’ve organized mass counseling events, helping
+              individuals bridge the gap between education and career success, driving growth and empowerment.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="imges/amitji.jpg" alt="">
+            </div>
+            <ul class="social">
+              <li><a href="https://www.linkedin.com/company/edufy-learning-live/" class="fab fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/edufy_nova/profilecard/?igsh=MWQzbHJ1NHZreGpyaw==" class="fab fa-instagram" target="_blank"></a></li>
+              <li><a href="#" class="fab fa-google-plus"></a></li>
+
+            </ul>
+            <div class="team-content">
+              <h3 class="title">Amit Khandelwal</h3>
+              <span class="post">Manager</span>
+            </div>
+            <p class="description" style="text-align: justify;">
+              I’m Amit Khandelwal, and I specialize in counseling working professionals, helping them navigate the
+              challenges of career growth alongside academic development. As a leader in the growing edtech industry,
+              I’m passionate about shaping its future and empowering individuals to achieve their goals.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="our-team">
+            <div class="pic">
+              <img src="imges/subyrj.jpg" alt="">
+            </div>
+            <ul class="social">
+              <li><a href="https://www.linkedin.com/company/edufy-learning-live/" class="fab fa-linkedin" target="_blank"></a></li>
+              <li><a href="https://www.instagram.com/edufy_nova/profilecard/?igsh=MWQzbHJ1NHZreGpyaw==" class="fab fa-instagram" target="_blank"></a></li>
+              <li><a href="#" class="fab fa-google-plus"></a></li>
+
+            </ul>
+            <div class="team-content">
+              <h3 class="title">Yuvraj Sharma</h3>
+              <span class="post">Co founder COO</span>
+            </div>
+            <p class="description" style="text-align: justify;">
+              I’m Yuvraj Sharma, with a strong background in skill development, learning, and development. I’ve worked
+              as a career counselor with Suresh Gyan Vihar University (SGVU), VGU University, and Sunstone, helping
+              students and professionals navigate their career paths. My focus has been on fostering growth, enhancing
+              employability, and guiding individuals toward achieving their personal and professional goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-light py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <!-- Left Section -->
+        <div class="col-md-6 left-section">
+          <img src="imges/contact-img.png" alt="Illustration" />
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-md-6">
+          <div class="right-section">
+            <h3 class="text-center mb-4">Create A Better Future For Yourself</h3>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="First Name" required />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required />
+              </div>
+              <div class="mb-3">
+                <input type="tel" class="form-control" placeholder="Mobile Number" required />
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Year of experience" required />
+              </div>
+              <div class="mb-3">
+                <label for="resume" class="form-label">Upload Your Resume</label>
+                <input type="file" class="form-control" id="resume" />
+              </div>
+              <div class="mb-3">
+                <select class="form-select" required>
+                  <option value="" disabled selected>Select Profile</option>
+                  <option value="developer">UG</option>
+                  <option value="designer">PG</option>
+                  <option value="manager">Manager</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-warning w-100 text-white">Submit Application</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  <br>
+
+
+
+  <div id="footer"></div>
+  <script>
+    
+  </script>
+  <!-- Scripts for Bootstrap Functionality -->
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

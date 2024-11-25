@@ -1,0 +1,258 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+    /* Navbar Brand Styling */
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        width: 100px;
+
+    }
+
+    .navbar-brand img {
+        /* max-height: 50px; */
+        margin-right: 10px;
+        /* height: 100px; */
+        margin-left: 30px;
+        width: 100%;
+    }
+
+    nav {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+    }
+
+    /* Button Styling */
+    .highlighted-btn {
+        background-color: #ff6f00;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        transition: all 0.3s ease;
+    }
+
+    .highlighted-btn:hover {
+        background-color: #ff4500;
+    }
+
+    /* Dropdown Item Images */
+    .dropdown-item img {
+        max-width: 30px;
+        margin-right: 10px;
+        border-radius: 5px;
+    }
+
+    /* Navbar Background and Text Colors */
+    .navbar {
+        background-color: white;
+        /* Navbar background color */
+    }
+
+    .nav-link {
+        color: black !important;
+        /* Text color for navbar links */
+    }
+
+    .nav-1 {
+        margin-right: 40px;
+    }
+
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+
+
+    }
+
+    .search-container {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .search-input {
+        width: 100%;
+        padding: 10px 40px 10px 10px;
+        /* Padding adjusted for icon */
+        border: 2px solid orangered;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .search-icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: orangered;
+    }
+
+    @media (max-width: 768px) {
+        .search-input {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<!-- <div class="top d-flex" style="background-color: #1a237e; color: white; padding: 10px;">
+    <p>Top Universities & Colleges</p>
+
+       <p> Trending Courses</p>
+        
+      <p> Study Abroad</p>
+        
+      <p> Entrance Exams</p>
+        
+       <p> Web Stories</p>
+       <div class="bt" style="margin-left: 40rem;">
+       <button  style="border-radius:0px 10px; padding: 10px; width: 110px;   background: linear-gradient(to right, #ff7e5f, #feb47b); color: white;">join Now</button>
+       </div> -->
+<!-- </div>  -->
+
+<nav class="   navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="imges/logo1.png" alt="Logo"> <!-- Replace with your logo image -->
+    </a>
+    <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 10px;">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-1" id="navbarNav">
+
+
+        <ul class="navbar-nav ml-auto">
+
+            <!-- Explore Courses Dropdown -->
+            <li class="p-1">
+                <div class="search-bar">
+                    <div class="search-container">
+                        <input type="text" class="search-input" placeholder="Search...">
+                        <i class="fas fa-search search-icon"></i> <!-- Search Icon -->
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item dropdown py-2 p-1">
+                <a class="nav-link dropdown-toggle text-white" href="#" id="coursesDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                    style="background-color: navy; border-radius: 10px;">
+                    Explore Courses
+                </a>
+                <div class="dropdown-menu" aria-labelledby="coursesDropdown" style="background-color: orange;">
+                    <a class="dropdown-item" href="pg.html">Online PG Programmes</a>
+                    <a class="dropdown-item" href="ug.html"> Online UG Programmes</a>
+                    <a class="dropdown-item" href="cartficate.html">certificate</a>
+                    <!-- <a class="dropdown-item" href="diploma.html"> Diploma Courses</a>
+                    <a class="dropdown-item" href="exect.html"> Executive Programmes</a>
+                    <a class="dropdown-item" href="inter.html"> International Programmes</a>
+                    <a class="dropdown-item" href="fre.html"> Free Courses</a> -->
+                </div>
+            </li>
+            <li class="nav-item p-1">
+                <a  class="nav-link"    href="manger.html"> knowledge bank</a>
+                 </li>
+            <!-- Top University Dropdown -->
+            <!-- <li class="nav-item dropdown p-1">
+                <a class="nav-link dropdown-toggle" href="#" id="universityDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Top University
+                </a>
+                <div class="dropdown-menu" aria-labelledby="universityDropdown">
+                    <a class="dropdown-item" href="https://www.nmims.edu/" target="_blank">
+                        <img src="imges/nsi.png">NMIMS
+                    </a>
+                    <a class="dropdown-item" href="https://manipal.edu/" target="_blank">
+                        <img src="imges/main.jpeg" alt="Manipal Academy">
+                        Manipal Academy of Higher Education
+                    </a>
+                    <a class="dropdown-item" href="https://jaipur.manipal.edu/" target="_blank">
+                        <img src="imges/main.jpeg" alt="Manipal University Jaipur">
+                        Manipal University Jaipur
+                    </a>
+        
+                <a class="dropdown-item" href="https://smu.edu.in/" target="_blank">
+                    <img src="imges/skim.jpeg" alt="Sikkim Manipal University">
+                    Sikkim Manipal University
+                </a>
+                <a class="dropdown-item" href="https://www.amity.edu/" target="_blank">
+                    <img src="imges/amity-removebg-preview.png" alt="Amity University">
+                    Amity University
+                </a>
+                <a class="dropdown-item" href="https://www.vgu.ac.in/" target="_blank">
+                    <img src="imges/vg.jpeg" alt="VGU">
+                    VGU
+                </a>
+                <a class="dropdown-item" href="https://www.dypatil.edu/" target="_blank">
+                    <img src="imges/dy.png" alt="DY Patil">
+                    DY Patil
+                </a>
+                <a class="dropdown-item" href="https://www.imt.edu/" target="_blank">
+                    <img src="imges/imt.jpeg" alt="IMT Ghaziabad">
+                    IMT Ghaziabad
+                </a>
+
+
+                    <a class="dropdown-item" href="https://www.iitb.ac.in" target="_blank">
+                        <img src="imges/logo9.jpeg" alt="IIT Bombay"> Indian Institute of Technology (IIT) Bombay
+                    </a>
+                    <a class="dropdown-item" href="https://home.iitd.ac.in" target="_blank">
+                        <img src="imges/logo8.png" alt="IIT Delhi"> Indian Institute of Technology (IIT) Delhi
+                    </a>
+                    <a class="dropdown-item" href="https://www.iitm.ac.in" target="_blank">
+                        <img src="imges/logo7.png" alt="IIT Madras"> Indian Institute of Technology (IIT) Madras
+                    </a>
+                    <a class="dropdown-item" href="http://www.du.ac.in" target="_blank">
+                        <img src="imges/logo6.jpeg" alt="University of Delhi"> University of Delhi
+                    </a>
+                    <a class="dropdown-item" href="https://www.jnu.ac.in" target="_blank">
+                        <img src="imges/logo5.jpeg" alt="JNU"> Jawaharlal Nehru University (JNU)
+                    </a>
+                    <a class="dropdown-item" href="http://www.bhu.ac.in" target="_blank">
+                        <img src="imges/logo4.jpeg" alt="BHU"> Banaras Hindu University (BHU)
+                    </a>
+                    <a class="dropdown-item" href="https://www.iisc.ac.in" target="_blank">
+                        <img src="imges/logo2.png" alt="IISc Bangalore"> Indian Institute of Science (IISc) Bangalore
+                    </a>
+                    <a class="dropdown-item" href="https://www.caluniv.ac.in" target="_blank">
+                        <img src="imges/logo3.jpeg" alt="University of Calcutta"> University of Calcutta
+                    </a>
+                    
+                </div>
+
+            </li> -->
+
+            <!-- Other Navbar Links -->
+            <li class="nav-item dropdown p-1">
+                <a class="nav-link dropdown-toggle " href="#" id="coursesDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    ID creation
+                </a>
+                <div class="dropdown-menu" aria-labelledby="coursesDropdown">
+                    <a class="dropdown-item" href="https://www.abc.gov.in" target="_blank">ABC Id creation</a>
+                    <a class="dropdown-item" href="https://deb.ugc.ac.in/StudentDEBId" target="_blank"> DEB Id creation </a>
+
+                </div>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link highlighted-btn" href="#">AI Based</a>
+            </li> -->
+            <li class="nav-item p-1">
+                <a class="nav-link" href="work.html">Work With Us</a>
+            </li>
+           
+            <li class="nav-item p-1">
+                <a class="nav-link text-white" href="content.html"
+                    style="background-color: #ff6f00; border-radius:0px 10px;">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Scripts for Bootstrap Functionality -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
